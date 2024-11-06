@@ -1,0 +1,96 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #0b1522;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+.painel {
+    background-color: white;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 20px;
+    text-align: center;
+    padding: 20px;
+    overflow: hidden;
+}
+
+
+.mensagem {
+    text-align: left;
+    font-size: 1.1em;
+    color: #333;
+    max-height: 300px;
+    overflow-y: auto;
+    margin-bottom: 20px;
+}
+
+.mensagem p {
+    margin-bottom: 10px;
+}
+
+
+.painel img {
+    width: 120px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+
+.botoes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px; 
+}
+
+button {
+    height: 45px;
+    width: 100%; 
+    background-color: red;
+    border: 2px solid white;
+    border-radius: 10px;
+    color: white;
+    font-size: 1.1em;
+    cursor: pointer;
+}
+
+button:disabled {
+    background-color: #d3d3d3; 
+    border: 2px solid #a9a9a9; 
+    color: #808080; 
+    cursor: not-allowed; 
+}
+
+
+
+@media (max-width: 600px) {
+    .painel {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .mensagem {
+        font-size: 1.2em; 
+    }
+
+    .botoes {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    button {
+        width: 100%; 
+        font-size: 1.2em;
+    }
+}
